@@ -1,5 +1,5 @@
 ﻿/* wang css-reset 
-   v1.0 | 20180427
+   v1.0.3 | 20180710
    License: none
 */
 
@@ -66,6 +66,10 @@ img{
 }
 textarea {
     resize: none;
+    font-size: .22rem;
+    font-family: 'PingFang SC', 'STHeitiSC-Light', 'Helvetica-Light', arial, sans-serif, 'Droid Sans Fallback', '微软雅黑', 'helvetica neue',tahoma,'hiragino sans gb',stheiti,'wenquanyi micro hei',\5FAE\8F6F\96C5\9ED1,\5B8B\4F53,sans-serif;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, .6); /* transparent解决手机点击出现蓝色底 */
+    outline: none; /* 20180710 */
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none;
@@ -85,7 +89,8 @@ a {
 a:hover {
     color: #333;
 }
-.clear {
+/* 清除浮动 */
+.clearfix:after {
     display: block;
     content: '';
     clear: both;
@@ -95,12 +100,39 @@ a:hover {
 input {
     outline:none;
     border: none;
-    font-size: .22rem;
 }
+input[type="button"], input[type="submit"], input[type="reset"], input[type="date"] {
+    font-size: .22rem;
+    -webkit-appearance: none;
+    border-radius:0;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
+     /* WebKit browsers */ 
+    color: #666;
+} 
+input:-moz-placeholder, textarea:-moz-placeholder { 
+    /* Mozilla Firefox 4 to 18 */ 
+    color: #666;
+} 
+input::-moz-placeholder, textarea::-moz-placeholder { 
+     /* Mozilla Firefox 19+ */ 
+    color: #666;
+} 
+input:-ms-input-placeholder, textarea:-ms-input-placeholder { 
+     /* Internet Explorer 10+ */ 
+    color: #666;
+}
+/* 解决谷歌浏览器输入框黄色底问题 */
 input:-webkit-autofill,
     input:-webkit-autofill:hover,
     input:-webkit-autofill:focus,
     input:-webkit-autofill:active {
         -webkit-transition-delay: 99999s;
         -webkit-transition: color 99999s ease-out, background-color 99999s ease-out;
+}
+/* 苹果手机上input的button颜色变蓝变绿 */
+input[type=button], input[type=submit], input[type=file], button {
+    cursor: pointer;
+    outline: 0px;
+    -webkit-appearance:none;
 }
