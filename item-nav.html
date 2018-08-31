@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+
+    <title>产品中心</title>
+    <link href="./css/awesome.css" rel="stylesheet">
+    <link href="./css/base.css" rel="stylesheet">
+    <link href="./css/common.css" rel="stylesheet">
+    <link href="./css/iSlider.css" rel="stylesheet">
+    <link href="./css/index.css" rel="stylesheet">
+    
+    <script type="text/javascript" src="./js/jquery1.10.2.js"></script>
+    <script type="text/javascript" src="./js/fontSize.js"></script>
+    <script type="text/javascript" src="./js/common.js"></script>
+    <script type="text/javascript" src="./js/iSlider.js"></script>
+    <script type="text/javascript" src="./js/iSlider.animate.js"></script>
+    <script type="text/javascript" src="./js/iSlider.dot.js"></script>
+    <script type="text/javascript" src="./js/iSlider.plugin.button.js"></script>
+    <!-- <script type="text/javascript" src='./layer/layer.js'></script> -->
+</head>
+<body class='item-nav-body'>
+    <!-- 顶部header -->
+    <div class="m-header">
+        <a href=""><img class='scan' src="./img/header-scan.png"></a>
+        <a href="./index.html">
+            <img class='logo' src="./img/header-logo.png">
+        </a>
+        <a href=""><img class='msg' src="./img/header-msg.png"></a>
+    </div>
+    <!-- 顶部header结束 -->
+
+    <!--主体内容-->
+    <div class="item-nav">
+        <div class='nav-title'>
+            <i></i>
+            <span>产品中心</span>
+        </div>
+        <div class="slider-maincontent">
+            <div id="iSlider-wrapper"></div>
+        </div>
+
+    </div>
+    <!--主体内容结束-->
+
+    <!-- 底部提交栏 -->
+    <div class="item-nav-confirm">
+        <div class="order-detail-left">
+            <p>总计<span>￥</span><span class='tamount'>0.00</p>
+            <p>共<span class='tqty'>0</span>件商品</p>
+        </div>
+        <input type="button" value='提交' class='submit-confirm'>
+    </div>
+    <!-- 底部提交栏结束 -->
+
+    <!-- 仅提供Dom 不展示 -->
+    <div class="get-dom-wrapper" style='display: none'>
+        <div class='items-lists'>
+            <a href="./item-detail.html"><img src='./img/item-nav-pic2.jpg'></a>
+            <div class='bottom-lists-wrapper'>
+                <div class='nav-title-wrapper'>
+                    <p>11产品标题标题标题标题产品标题标题标题标题产品标题标题标题标题产品标题标题标题标题产品标题标题标题标题</p>
+                    <a href="./item-detail.html"><span></span><i class="fa fa-share-square-o" aria-hidden="true"></i><span>分享</span></a>
+                </div>
+                <div class='nav-price-wrapper'>
+                    <p><span>￥</span><span class='each-price'>189.0</span></p>
+                    <div class="stock-wrapper">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                        <input type="number" placeholder="0">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='items-lists'>
+            <a href="./item-detail.html"><img src='./img/nav-bg.png'></a>
+            <div class='bottom-lists-wrapper'>
+                <div class='nav-title-wrapper'>
+                    <p>22产品标题标题标题标题产品标题标题标题标题产品标题标题标题标题产品标题标题标题标题产品标题标题标题标题</p>
+                    <a href="./item-detail.html"><span></span><i class="fa fa-share-square-o" aria-hidden="true"></i><span>分享</span></a>
+                </div>
+                <div class='nav-price-wrapper'>
+                    <p><span>￥</span><span class='each-price'>189.0</span></p>
+                    <div class="stock-wrapper">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                        <input type="number" placeholder="0">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='items-lists'>
+            <a href="./item-detail.html"><img src='./img/nav-bg.png'></a>
+            <div class='bottom-lists-wrapper'>
+                <div class='nav-title-wrapper'>
+                    <p>33产品标题标题标题标题产品标题标题标题标题产品标题标题标题标题产品标题标题标题标题产品标题标题标题标题</p>
+                    <a href="./item-detail.html"><span></span><i class="fa fa-share-square-o" aria-hidden="true"></i><span>分享</span></a>
+                </div>
+                <div class='nav-price-wrapper'>
+                    <p><span>￥</span><span class='each-price'>189.0</span></p>
+                    <div class="stock-wrapper">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                        <input type="number" placeholder="0">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='items-lists'>
+            <a href="./item-detail.html"><img src='./img/nav-bg.png'></a>
+            <div class='bottom-lists-wrapper'>
+                <div class='nav-title-wrapper'>
+                    <p>44产品标题标题标题标题产品标题标题标题标题产品标题标题标题标题产品标题标题标题标题产品标题标题标题标题</p>
+                    <a href="./item-detail.html"><span></span><i class="fa fa-share-square-o" aria-hidden="true"></i><span>分享</span></a>
+                </div>
+                <div class='nav-price-wrapper'>
+                    <p><span>￥</span><span class='each-price'>189.0</span></p>
+                    <div class="stock-wrapper">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                        <input type="number" placeholder="0">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='items-lists'>
+            <a href="./item-detail.html"><img src='./img/nav-bg.png'></a>
+            <div class='bottom-lists-wrapper'>
+                <div class='nav-title-wrapper'>
+                    <p>44产品标题标题标题标题产品标题标题标题标题产品标题标题标题标题产品标题标题标题标题产品标题标题标题标题</p>
+                    <a href="./item-detail.html"><span></span><i class="fa fa-share-square-o" aria-hidden="true"></i><span>分享</span></a>
+                </div>
+                <div class='nav-price-wrapper'>
+                    <p><span>￥</span><span class='each-price'>189.0</span></p>
+                    <div class="stock-wrapper">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                        <input type="number" placeholder="0">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 仅提供Dom 不展示 结束 -->
+
+</body>
+<script>
+    $(function () {
+        // XXX
+        !function () {
+            // 全局对象 储存每个产品的价格 和数量
+            var itemsPriceAmount = [];
+
+            // 默认展示index为0的商品
+            var curIndex = 0;
+            var domContent = $('.get-dom-wrapper .items-lists');
+            var list = [];
+            domContent.each(function (index, el) {
+                // console.log(el);
+                $(el).attr('data-index', index);
+                list.push({content: el.outerHTML});
+                // 获取价格和默认数量存储到itemsPriceAmount
+                var curPrice = parseFloat($(el).find('.each-price').html());
+                // console.log(curPrice, 'curPrice');
+                itemsPriceAmount.push({'price': curPrice, 'count': 0, 'number': index});
+            });
+
+            var S = new iSlider(document.getElementById('iSlider-wrapper'), list, {
+                isLooping: 0,
+                isOverspread: 1,
+                isAutoplay: 0,
+                initIndex: 0, // 初始化的curIndex 0
+                animateTime: 800,
+                fixPage: false,
+                animateType: 'depth',
+                onSlideChanged: callBack,
+                onRenderComplete: callBack
+            });
+
+            // 切换当前场景的回调函数
+            function callBack (index) {
+                curIndex = index;
+                // console.log('curIndex', curIndex);
+                // 切换场景的时候回调 检查#iSlider-wrapper下所有 .items-lists的index值 并重新更新其对应的input值
+                var $sliderItemEle = $('#iSlider-wrapper .items-lists');
+                $sliderItemEle.each(function (index, el) {
+                    // console.log(el);
+                    // 获取遍历的index值
+                    var eachIndex = $(el).data('index');
+                    // 改写input值
+                    var $inputEle = $(el).find('input');
+                    $inputEle.val(itemsPriceAmount[eachIndex].count);
+                });
+
+            }
+
+            // 商品选购
+            // 动态绑定 增加数量
+            $("body").on("click", "#iSlider-wrapper .items-lists i.fa-plus", function() {
+                // console.log($(this).parents('.items-lists').data('index'));
+                // 找到当前的.item-lists绑定的data-index值
+                var $parentItemEle = $(this).parents('.items-lists');
+                var thisIndex = $parentItemEle.data('index');
+                console.log(thisIndex);
+
+                // 改写input内的值 改变itemsPriceAmount对应index的值
+                $parentItemEle.find('input').val(++itemsPriceAmount[thisIndex].count);
+
+                // 改写底部总价格和总数量的值
+                updateTotal();
+            });
+
+            // 动态绑定 增加数量
+            $("body").on("click", "#iSlider-wrapper .items-lists i.fa-minus", function() {
+                // console.log($(this).parents('.items-lists').data('index'));
+                // 找到当前的.item-lists绑定的data-index值
+                var $parentItemEle = $(this).parents('.items-lists');
+                var thisIndex = $parentItemEle.data('index');
+                // console.log(thisIndex);
+                // 判断不能小于0
+                if(itemsPriceAmount[thisIndex].count <= 0) {
+                    itemsPriceAmount[thisIndex].count = 0;
+                } else {
+                    // 改写input内的值 改变itemsPriceAmount对应index的值
+                    $parentItemEle.find('input').val(--itemsPriceAmount[thisIndex].count);
+                }
+
+                // 改写底部总价格和总数量的值
+                updateTotal();
+            });
+
+            // 监听input框的change事件
+            $("body").on("change", "#iSlider-wrapper .items-lists input", function() {
+                // console.log($(this).parents('.items-lists').data('index'));
+                // 找到当前的.item-lists绑定的data-index值
+                var $parentItemEle = $(this).parents('.items-lists');
+                var thisIndex = $parentItemEle.data('index');
+                // console.log(thisIndex);
+                
+                // 获取当前的input值
+                var curValue = $(this).val();
+
+                var reg = /^[1-9]\d*$/;
+                if (reg.test(curValue)) {
+                    curValue = parseInt(curValue)
+                    if (curValue <= 0) {
+                        $(this).val(0);
+                    }
+                }
+                else {
+                    curValue = 0;
+                    $(this).val(0);
+                }
+
+                //  改变itemsPriceAmount对应index的值
+                itemsPriceAmount[thisIndex].count = curValue;
+
+                // 改写底部总价格和总数量的值
+                updateTotal();
+            });
+
+            // 根据itemsPriceAmount内各个元素总数量和价格的值 改写底部总价格和总数量
+            function updateTotal () {
+                var tamountEle = $('.tamount');
+                var tqtyEle = $('.tqty');
+                var tamount = 0,
+                    tqty = 0;
+                for (var i = 0; i < itemsPriceAmount.length; i++) {
+                    tamount +=  itemsPriceAmount[i].count * itemsPriceAmount[i].price;
+                    tqty += itemsPriceAmount[i].count;
+                }
+                tamountEle.html(tamount.toFixed(2));
+                tqtyEle.html(tqty);
+            }
+
+            // 提交
+            $('.submit-confirm').on('click', function () {
+
+                var locationStr = '';
+                for (var i = 0; i < itemsPriceAmount.length; i++) {
+                    locationStr += itemsPriceAmount[i].number + '|' + itemsPriceAmount[i].count + ',';
+                }
+                locationStr = locationStr.substring(0, locationStr.length - 1);
+                // console.log('b', itemsPriceAmount);
+
+                window.location.href="xxx.html?data="+locationStr;
+            });
+
+        }();
+
+
+    });
+
+
+</script>
+</html>
