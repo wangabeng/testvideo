@@ -29,6 +29,8 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
     <style>
+        body {
+        }
         .logistics-layer-content .confirm input {
             margin-bottom: 1.2rem;
         }
@@ -172,7 +174,7 @@
                             type: 1,
                             area: ['5rem', '80%'], //宽高
                             content: $('.logistics-detail-layer')[0].innerHTML,
-                            style: 'width: 5rem; height: 80%;border:none;overflow-y:scroll;bottom: 0'
+                            style: 'position:fixed; left:0; top:0; width:90%; height:90%; border: none; -webkit-animation-duration: .5s; animation-duration: .5s;overflow-y:auto'
                         });
                     });
 
