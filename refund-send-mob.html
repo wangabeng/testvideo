@@ -8,7 +8,7 @@
     <meta content="telephone=no" name="format-detection">
     <meta content="email=no" name="format-detection">
 
-    <title>填写物流-安美拉</title>
+    <title>填写物流3-安美拉</title>
     <link href="./css/awesome.css" rel="stylesheet">
     <link href="./css/base.css" rel="stylesheet">
     <link href="./css/common.css" rel="stylesheet">
@@ -118,7 +118,7 @@
 
     <!-- 查看订单 layer弹出层 -->
     <div class='logistics-detail-layer' style='display: none'>
-        <div class='logistics-layer-content' style='overflow-y:scroll'>
+        <div class='logistics-layer-content'>
             <div class="fill-one">
                 <div><span>物流公司：</span><input type="text" id='logistics-name' placeholder="请输入物流公司名称"></div>
                 <div><span>物流单号：</span><input type="text" id='logistics-number' placeholder="请输入物流单号"></div>
@@ -166,7 +166,7 @@
                             type: 1,
                             area: ['5rem', '80%'], //宽高
                             content: $('.logistics-detail-layer')[0].innerHTML,
-                            style: 'width: 5rem; height: 80%;border:none;overflow-y:auto'
+                            style: 'width: 5rem; height: 80%;border:none;overflow-y:auto;'
                         });
                     });
 
