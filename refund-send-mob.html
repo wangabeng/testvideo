@@ -118,7 +118,7 @@
 
     <!-- 查看订单 layer弹出层 -->
     <div class='logistics-detail-layer' style='display: none'>
-        <div class='logistics-layer-content' style='overflow-y:auto'>
+        <div class='logistics-layer-content' style='overflow-y:scroll'>
             <div class="fill-one">
                 <div><span>物流公司：</span><input type="text" id='logistics-name' placeholder="请输入物流公司名称"></div>
                 <div><span>物流单号：</span><input type="text" id='logistics-number' placeholder="请输入物流单号"></div>
@@ -165,7 +165,8 @@
                             title: '添加物流信息',
                             type: 1,
                             area: ['5rem', '80%'], //宽高
-                            content: $('.logistics-detail-layer')[0].innerHTML
+                            content: $('.logistics-detail-layer')[0].innerHTML,
+                            style: 'width: 5rem; height: 80%;border:none;overflow-y:auto'
                         });
                     });
 
