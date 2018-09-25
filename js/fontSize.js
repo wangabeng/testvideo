@@ -1,4 +1,4 @@
-﻿// 根据不同设备设置body的font-size值
+// 根据不同设备设置body的font-size值
 !function () {
     // 设置默认最大宽度
     var DEFAULT_MAX_WIDTH = 1280;

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+
+    <title>评分-安美拉</title>
+    <link href="./css/awesome.css" rel="stylesheet">
+    <link href="./css/base.css" rel="stylesheet">
+    <link href="./css/common.css" rel="stylesheet">
+    <link href="./css/iSlider.css" rel="stylesheet">
+    <link href="./css/index.css" rel="stylesheet">
+    
+    <script type="text/javascript" src="./js/jquery1.10.2.js"></script>
+    <script type="text/javascript" src="./js/fontSize.js"></script>
+    <script type="text/javascript" src="./js/common.js"></script>
+<!--     <script type="text/javascript" src="./js/iSlider.js"></script>
+    <script type="text/javascript" src="./js/iSlider.animate.js"></script>
+    <script type="text/javascript" src="./js/iSlider.dot.js"></script>
+    <script type="text/javascript" src="./js/iSlider.plugin.button.js"></script> -->
+    <script type="text/javascript" src='./layer/layer.js'></script>
+    <script type="text/javascript" src='./js/distpicker.js'></script>
+
+</head>
+<body>
+    <div class="rate-lists">
+        <div class="upload-wrapper">
+            <div class="name">
+                <span>被评分人：</span><input type="text" placeholder="请输入被评分人姓名">
+            </div>
+            <div class="upload">
+                <span>上传头像：</span>
+                <label for="upload"><input type="file" id='upload' style='display: none'><img  src="./img/click2.png" alt=""></label>
+            </div>
+        </div>
+        <!-- 评分 -->
+        <div class="rate-contents">
+            <p class='total'>综合评分 <span>68分</span></p>
+            <ul>
+                <li>
+                    <a href="javascript:;">
+                        <div class="user-name">
+                            <img src="./img/user2.png">
+                            <span>张三张三张三</span>
+                        </div>
+                        <div class="score-details">
+                            <p><span>表达能力（语速、吐字清晰度等）：</span><span class='score'>5分</span></p>
+                            <p><span>课程内容是否清晰，重点突出：</span><span class='score'>5分</span></p>
+                            <p><span>课程时间安排的合理程度：</span><span class='score'>5分</span></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <div class="user-name">
+                            <img src="./img/user2.png">
+                            <span>张三</span>
+                        </div>
+                        <div class="score-details">
+                            <p><span>表达能力（语速、吐字清晰度等）：</span><span class='score'>5分</span></p>
+                            <p><span>课程内容是否清晰，重点突出：</span><span class='score'>5分</span></p>
+                            <p><span>课程时间安排的合理程度：</span><span class='score'>5分</span></p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <div class="user-name">
+                            <img src="./img/user2.png">
+                            <span>张三</span>
+                        </div>
+                        <div class="score-details">
+                            <p><span>表达能力（语速、吐字清晰度等）：</span><span class='score'>5分</span></p>
+                            <p><span>课程内容是否清晰，重点突出：</span><span class='score'>5分</span></p>
+                            <p><span>课程时间安排的合理程度：</span><span class='score'>5分</span></p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- 评分 结束 -->
+    </div>
+
+    <!-- 底栏 -->
+    <div class="bottom-btn-wrapper">
+        <a href="#">提交</a>
+    </div>
+
+</body>
+<script>
+    $(function () {
+        // 文件上传
+        !function () {
+            $('#upload').on('change', function () {
+                var allFiles = this.files;
+                var fileReader = new FileReader();
+                fileReader.readAsDataURL(allFiles[0]);
+
+                // 获取文件大小
+                var size = allFiles[0].size;
+                var maxsize = 8*1024*1024;//2M
+
+                // 限制文件大小
+                if (size > maxsize) {
+                    alert('文件不超过8M');
+                }
+
+                fileReader.onload = function (e) {
+                    // 获取base64的字符串（可以直接上传 在服务器端存储为正常的图片格式）
+                    var baseContent = e.target.result.split(',')[1];
+                    // 获取文档类型
+                    var fileType = e.target.result.split(',')[0].split(':')[1].split(';')[0];
+                    // src
+                    var srcContent = e.target.result;
+                    
+                    // 改变img的src值
+                    if (fileType === 'image/jpeg' || fileType === 'image/png' || fileType === 'image/gif') {
+                        $('.upload img').attr('src', srcContent);
+                    } else {
+                        return;
+                    }
+                };
+            });
+        }();
+    });
+</script>
+</html>

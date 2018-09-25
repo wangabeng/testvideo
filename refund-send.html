@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+
+    <title>填写物流-安美拉</title>
+    <link href="./css/awesome.css" rel="stylesheet">
+    <link href="./css/base.css" rel="stylesheet">
+    <link href="./css/common.css" rel="stylesheet">
+    <link href="./css/iSlider.css" rel="stylesheet">
+    <link href="./css/index.css" rel="stylesheet">
+    
+    <script type="text/javascript" src="./js/jquery1.10.2.js"></script>
+    <script type="text/javascript" src="./js/fontSize.js"></script>
+    <script type="text/javascript" src="./js/common.js"></script>
+<!--     <script type="text/javascript" src="./js/iSlider.js"></script>
+    <script type="text/javascript" src="./js/iSlider.animate.js"></script>
+    <script type="text/javascript" src="./js/iSlider.dot.js"></script>
+    <script type="text/javascript" src="./js/iSlider.plugin.button.js"></script> -->
+    <script type="text/javascript" src='./layer/layer.js'></script>
+    <script type="text/javascript" src='./js/distpicker.js'></script>
+
+    <!-- vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+<body class='refund-send-body'>
+    <div class='refund-send' id='refund-send'>
+        <img class='refund-stage' src="./img/退货流程2.png" alt="">
+        <div class="refund-size-wrapper">
+            <p class='name'>D21某某内衣内衣</p>
+
+            <div class='size-detail'>
+                <div class="each-line first">
+                    <span class='color'>颜色</span>
+                    <span class='size'>尺码</span>
+                    <span class='amount1'>调货数量</span>
+                    <span class='amount2'>提货数量</span>
+                </div>
+                <div class="each-line">
+                    <span class='color'>黑色</span>
+                    <span class='size'>L</span>
+                    <span class="amount1">22</span>
+                    <span class="amount2">0</span>
+                </div>
+                <div class="each-line">
+                    <span class='color'></span>
+                    <span class='size'>M</span>
+                    <span class="amount1">22</span>
+                    <span class="amount2">0</span>
+                </div>
+                <div class="each-line">
+                    <span class='color'></span>
+                    <span class='size'>XXL</span>
+                    <span class="amount1">22</span>
+                    <span class="amount2">0</span>
+                </div>
+                <div class="each-line">
+                    <span class='color'>肤色</span>
+                    <span class='size'>S</span>
+                    <span class="amount1">22</span>
+                    <span class="amount2">0</span>
+                </div>
+                <div class="each-line">
+                    <span class='color'></span>
+                    <span class='size'>XXXL</span>
+                    <span class="amount1">22</span>
+                    <span class="amount2">0</span>
+                </div>
+            </div>
+            <!-- 公司地址 -->
+            <div class="corp-address">
+                <p>退货地址：浙江省杭州市西湖区雷峰塔12楼雷峰塔12楼雷峰塔12楼雷峰塔12楼</p>
+            </div>
+
+            <!-- 地址填写 -->
+            <div class="address">
+                <p>收货人地址：</p>
+                <!-- 省市区选择 -->
+                <div data-toggle="distpicker" id='target'>
+                  <select></select>
+                  <select></select>
+                  <select></select>
+                </div>
+                <!-- 省市区选择 结束 -->
+                <textarea placeholder="请输入街道地址"></textarea>
+            </div>
+
+            <!-- 物流信息填写 -->
+            <div class="logistics">
+                <p class='title'>退货物流</p>
+                <a class='add-one' href='javascript:;'><i class="fa fa-plus" aria-hidden="true"></i><span>添加物流</span></a>
+                <ul>
+                    <li v-for='(item, index) in logistics'>
+                        <a href="javascript:;">
+                            <p>物流公司：{{item.logisticsName}}</p>
+                            <p>物流单号：{{item.logisticsNumber}}</p>
+                        </a>
+                        <i class="fa fa-times" aria-hidden="true" @click='remove(index)'></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <!-- 底栏 -->
+    <div class="bottom-btn-wrapper">
+        <a href="javascript:;">提交</a>
+    </div>
+
+
+
+
+    <!-- 查看订单 layer弹出层 -->
+    <div class='logistics-detail-layer' style='display: none'>
+        <div class='logistics-layer-content'>
+            <div class="fill-one">
+                <div><span>物流公司：</span><input type="text" id='logistics-name' placeholder="请输入物流公司名称"></div>
+                <div><span>物流单号：</span><input type="text" id='logistics-number' placeholder="请输入物流单号"></div>
+            </div>
+            <div class='confirm'>
+                <input type="button" value='确认'>
+            </div>
+        </div>
+    </div>
+    <!-- 查看订单 layer弹出层 -->
+
+</body>
+<script>
+    $(function () {
+
+
+        // vue
+        !function () {
+            var app = new Vue({
+                el: '#refund-send',
+                data: {
+                    logistics: [],
+                },
+                mounted () {
+                    var _this = this;
+
+                    // 弹出层
+                    var curLayer = null;
+                    $('.add-one').on('click', function () {
+                        //页面层
+                        curLayer = layer.open({
+                            title: '添加物流信息',
+                            type: 1,
+                            area: ['5rem', '50%'], //宽高
+                            content: $('.logistics-detail-layer')
+                        });
+                    });
+
+                    // 关闭弹出层
+                    $("body").on("click", ".confirm input", function() {
+                        
+                        var logisticsName = $('#logistics-name').val();
+                        var logisticsNumber = $('#logistics-number').val();
+                        // 输入验证
+                        if(!logisticsName || !logisticsNumber) {
+                            alert('请填写完整的物流信息');
+                            return;
+                        }
+                        for (var i = 0; i < _this.logistics.length; i++) {
+                            if (logisticsName == _this.logistics[i].logisticsName && logisticsNumber == _this.logistics[i].logisticsNumber) {
+                                alert('填写的物流信息重复');
+                                layer.close(curLayer);
+                                return;
+                            }
+                        }
+
+                        layer.close(curLayer);
+                        _this.logistics.unshift({
+                            logisticsName: logisticsName,
+                            logisticsNumber,logisticsNumber
+                        });
+                    });
+
+                    // 提交跳转
+                    $('.bottom-btn-wrapper a').on('click', function () {
+                        // 提交时获取物流信息
+                        var logisticsData = _this.logistics;
+                        // 跳转
+                        window.location.href = './refund-lists.html' + '?length=' + logisticsData.length;
+                    });
+                    
+                    // 省市区选择
+                    $('#target').distpicker({
+                      province: '浙江省',
+                      city: '杭州市',
+                      district: '萧山区'
+                    });
+                    $('#target').distpicker('destroy');
+                    $("#target").distpicker({
+                        province: '---- 所在省 ----',
+                        city: '---- 所在市 ----',
+                        district: '---- 所在区 ----'
+                    });
+                },
+                methods: {
+                    remove: function (index) {
+                        this.logistics.splice(index, 1);
+                    }
+                }
+            });
+        }();
+    });
+</script>
+</html>

@@ -92,7 +92,7 @@
                 iSlider.setStyle(outer, 'perspective', scale * 4);
                 dom.style.zIndex = i === 1 ? 1 : 0;
                 // 修改源码 scale(' + zoomScale + ')改为scale(' + zoomScale * 1.1 + ')
-                iSlider.setStyle(dom, 'transform', 'scale(' + zoomScale * 1.04 + ') translateZ(0) translate' + axis + '(' + (offset + 1.3 * scale * (i - 1)) + 'px)');
+                iSlider.setStyle(dom, 'transform', 'scale(' + zoomScale * 1.12 + ') translateZ(0) translate' + axis + '(' + (offset + 1.3 * scale * (i - 1)) + 'px)');
             }
 
             depth.effect = iSlider.styleProp('transform');
