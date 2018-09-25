@@ -28,6 +28,12 @@
     <!-- vue -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
+    <style>
+        .logistics-layer-content .confirm input {
+            margin-bottom: 1.2rem;
+        }
+    </style>
+
 </head>
 <body class='refund-send-body'>
     <div class='refund-send' id='refund-send'>
@@ -166,7 +172,7 @@
                             type: 1,
                             area: ['5rem', '80%'], //宽高
                             content: $('.logistics-detail-layer')[0].innerHTML,
-                            style: 'width: 5rem; height: 80%;border:none;overflow-y:auto;'
+                            style: 'width: 5rem; height: 80%;border:none;overflow-y:auto;bottom: .3rem'
                         });
                     });
 
