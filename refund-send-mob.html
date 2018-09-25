@@ -29,11 +29,7 @@
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
     <style>
-        body {
-        }
-        .logistics-layer-content .confirm input {
-            margin-bottom: 1.2rem;
-        }
+
     </style>
 
 </head>
@@ -173,8 +169,8 @@
                             title: '添加物流信息',
                             type: 1,
                             area: ['5rem', '80%'], //宽高
-                            content: $('.logistics-detail-layer')[0].innerHTML,
-                            style: 'position:fixed; left:0; top:0; width:90%; height:90%; border: none; -webkit-animation-duration: .5s; animation-duration: .5s;overflow-y:auto'
+                            content: $('.logistics-detail-layer').html(),
+                            style: 'position:fixed; left:0; top:0; width:5rem;margin-left:.7rem; height:90%; border: none; -webkit-animation-duration: .5s; animation-duration: .5s;overflow-y:auto'
                         });
                     });
 
