@@ -21,4 +21,34 @@
             }
         }
     });
-})(jQuery);  
+})(jQuery);
+
+// 实时获取1rem单位的px值 rem转像素
+function remChangePx (remSize) {
+    var deviceWidth = document.body && document.body.clientWidth || document.getElementsByTagName("html")[0].offsetWidth;
+    return remSize * (deviceWidth * 200 / 1280);
+}
+
+$(function () {
+    // 底部footer点击弹出下拉菜单
+    !function () {
+        // 点击底部导航
+        $('.m-footer-nav>li>a').on('click', function (e) {
+            e.stopPropagation();
+            $(this).parent().siblings().find('.m-footer-navlist').hide();
+            $(this).next().toggle();
+        });
+
+        // 点击底部下拉菜单列表
+        $('.m-footer-navlist').find('li').on('click', function () {
+            $(this).parent().hide();
+        });
+        // 点击body 隐藏下拉菜单
+        $('body').on('click', function () {
+
+            $('.m-footer-navlist').hide();
+        });
+    }();    
+});
+
+
