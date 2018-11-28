@@ -11692,7 +11692,7 @@
   background-repeat: no-repeat;
   background-size: 6.4rem 100%;
   background-position: center center;
-  background-attachment: fixed;
+  /*background-attachment: fixed;*/
 }
 
 /*可以设置svg视野大小 可理解为工作区大小 然后svg内path的尺寸会跟着缩放*/
