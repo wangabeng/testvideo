@@ -11690,7 +11690,7 @@
 .brand-intro-body {
   background-image: url("../img/brand-intro-bottom_01.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 6.4rem 100%;
   background-position: center center;
   background-attachment: fixed;
 }
