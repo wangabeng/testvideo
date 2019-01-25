@@ -1643,8 +1643,6 @@
   overflow-y: hidden;
   background:url(../img/bj-v2.jpg) no-repeat top left ;
   background-size:  cover;*/
-  background: -webkit-gradient(linear, left top, left bottom, from(#ff4444), to(#ff9864));
-  background: linear-gradient(top, #ff4444, #ff9864);
 }
 
 .newyear-question-rule {
@@ -1659,6 +1657,11 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  padding-bottom: .5rem;
+  /*背景色设置*/
+  min-height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff4444), to(#ff9864));
+  background: linear-gradient(top, #ff4444, #ff9864);
 }
 
 .newyear-question-rule .rule-container {
@@ -1746,11 +1749,13 @@
   overflow-y: hidden;
   background:url(../img/bj-v2.jpg) no-repeat top left ;
   background-size:  cover;*/
-  background: -webkit-gradient(linear, left top, left bottom, from(#ff4444), to(#ff9b65));
-  background: linear-gradient(top, #ff4444, #ff9b65);
 }
 
 .newyear-question-sum {
+  /*背景色设置*/
+  min-height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff4444), to(#ff9864));
+  background: linear-gradient(top, #ff4444, #ff9864);
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
