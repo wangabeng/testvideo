@@ -73,10 +73,10 @@
 }
 
 .s-annual .annual-navs li a.active {
-  /*background: -webkit-gradient(linear, left top, right top, from(#ff512f), to(#de1573));
+  background: -webkit-gradient(linear, left top, right top, from(#ff512f), to(#de1573));
   background: linear-gradient(to right, #ff512f, #de1573);
-  -webkit-background-clip: text;*/
-  color: #ff512f;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 .s-annual .annual-navs li a.active:after {
@@ -101,9 +101,1775 @@
 }
 
 /* s-annual.html 2019年会邀请函页 结束 */
+/* annual-query.html 会员查询页 */
+.annual-query .sub-title {
+  font-size: .24rem;
+  padding: .3rem 0 .2rem;
+  text-align: center;
+}
+
+.annual-query .m-query-inner .query-form-wrapper {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 .3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.annual-query .m-query-inner .query-form-wrapper label.each-input {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: .2rem 0;
+  margin-bottom: .2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.annual-query .m-query-inner .query-form-wrapper label.each-input img {
+  width: .41rem;
+  height: .41rem;
+}
+
+.annual-query .m-query-inner .query-form-wrapper label.each-input > span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0 .3rem;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.annual-query .m-query-inner .query-form-wrapper label.each-input > input {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: .1rem .2rem;
+}
+
+.annual-query .m-query-inner .query-form-wrapper label.each-input .get-code {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.annual-query .m-query-inner .query-form-wrapper label.each-input .get-code .code-input {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: .1rem .2rem;
+}
+
+.annual-query .m-query-inner .query-form-wrapper label.each-input .get-code .code-btn {
+  padding: .06rem .1rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #fff;
+  background-color: #aeaeae;
+  border-radius: .04rem;
+}
+
+.annual-query .m-query-inner .query-form-wrapper label.each-input .get-code .code-pic {
+  color: #818181;
+  width: 1.5rem;
+  background-color: #d6d6d6;
+  border-radius: .04rem;
+}
+
+.annual-query .m-query-inner .query-form-wrapper .submit-btn {
+  width: 100%;
+  margin-top: .3rem;
+  color: #fff;
+  background: -webkit-gradient(linear, left top, right top, from(#ff512f), to(#de1573));
+  background: linear-gradient(left, #ff512f, #de1573);
+  padding: .12rem 0;
+  border-radius: .05rem;
+  font-size: .25rem;
+}
+
+.annual-query .query-sum {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: .3rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 0 .3rem;
+  font-size: .22rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+/* annual-query.html 会员查询页 结束 */
+/* annual-user.html 会员信息页 */
+.annual-user {
+  min-height: 100%;
+  background-image: url("../img/会员背景.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.annual-user .head-logo {
+  width: 2rem;
+  padding: .6rem 0 .9rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.annual-user .agent-grade-wrapper {
+  width: 5.23rem;
+  height: 1.29rem;
+}
+
+.annual-user .agent-grade-wrapper.market {
+  background-image: url("../img/市场总监.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+}
+
+.annual-user .agent-grade-wrapper.star {
+  background-image: url("../img/明星店主.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+}
+
+.annual-user .agent-grade-wrapper.vip {
+  background-image: url("../img/钻石VIP.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+}
+
+.annual-user .agent-infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 5.23rem;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: .2rem 0 .55rem;
+}
+
+.annual-user .agent-infos .left {
+  color: #2a2d36;
+  font-size: .21rem;
+  text-shadow: 0.1em 0.1em #f6f6f6;
+  width: 2.3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.annual-user .agent-infos .potrait {
+  width: .5rem;
+  height: .5rem;
+}
+
+.annual-user .agent-infos .right {
+  color: #2a2d36;
+  font-size: .21rem;
+  text-shadow: 0.1em 0.1em #f6f6f6;
+  width: 2.3rem;
+  text-align: right;
+}
+
+.annual-user .welcom-txt {
+  color: #f6f6f6;
+  font-size: .25rem;
+  font-weight: bold;
+}
+
+.annual-user .enter-in {
+  margin-top: .8rem;
+}
+
+.annual-user .enter-in img {
+  width: 3.27rem;
+}
+
+/* annual-user.html 会员信息页 结束 */
+/* erp-query.html erp产品查询页 */
+.erp-query {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.erp-query h2 {
+  padding: .2rem 0;
+  font-size: .26rem;
+  font-weight: bold;
+}
+
+.erp-query .query-input-wrapper {
+  width: 6.0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: .1rem 0;
+}
+
+.erp-query .query-input-wrapper .query-content {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: .05rem .1rem;
+  font-size: .22rem;
+  width: 3.5rem;
+}
+
+.erp-query .query-input-wrapper .query-btn {
+  padding: .05rem .2rem;
+  margin-left: auto;
+  background: -webkit-gradient(linear, left top, right top, from(#ff512f), to(#de1573));
+  background: linear-gradient(left, #ff512f, #de1573);
+  color: #fff;
+  border-radius: .05rem;
+}
+
+.erp-query .query-table {
+  width: 6.2rem;
+  max-width: 6.2rem;
+  margin-top: .2rem;
+  background-color: transparent;
+  border-spacing: 0;
+  border-collapse: collapse;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: .2rem;
+}
+
+.erp-query .query-table thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+  background-color: #f5f5f5;
+  font-size: .22rem;
+}
+
+.erp-query .query-table thead tr th {
+  vertical-align: middle;
+  border-bottom: 1px solid #ddd;
+  line-height: 1.5;
+  border-right: 1px solid #ddd;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: .05rem;
+}
+
+.erp-query .query-table thead tr th:last-child {
+  border-right: 0 none;
+}
+
+.erp-query .query-table thead tr th.no {
+  width: 1rem;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.erp-query .query-table thead tr th.name {
+  width: 2rem;
+}
+
+.erp-query .query-table tbody tr {
+  /*display: table-row;*/
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+.erp-query .query-table tbody tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+.erp-query .query-table tbody tr th {
+  vertical-align: middle;
+  border-bottom: 1px solid #ddd;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-right: 1px solid #ddd;
+  padding: .05rem;
+}
+
+.erp-query .query-table tbody tr th:last-child {
+  border-right: 0 none;
+}
+
+.erp-query .query-table tbody tr td {
+  vertical-align: middle;
+  border-bottom: 1px solid #ddd;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-right: 1px solid #ddd;
+  padding: .05rem;
+  word-break: break-all;
+}
+
+.erp-query .query-table tbody tr td:last-child {
+  border-right: 0 none;
+}
+
+.bottom-confirm {
+  width: 100%;
+  height: .7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.bottom-confirm a {
+  text-align: center;
+  padding: .08rem .5rem;
+  background: -webkit-gradient(linear, left top, right top, from(#ff512f), to(#de1573));
+  background: linear-gradient(left, #ff512f, #de1573);
+  color: #fff;
+  border-radius: .05rem;
+}
+
+/* erp-query.html erp产品查询页 结束 */
+/* erp-bind.html erp产品查询页 */
+.erp-bind {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.erp-bind h2 {
+  padding: .2rem 0;
+  font-size: .26rem;
+  font-weight: bold;
+}
+
+.erp-bind .bind-input-wrapper {
+  width: 6.0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: .1rem 0;
+}
+
+.erp-bind .bind-input-wrapper .bind-content {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  padding: .05rem .1rem;
+  font-size: .22rem;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.erp-bind .code-query-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: .15rem 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 6rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.erp-bind .code-query-wrapper input {
+  width: 2.9rem;
+  text-align: center;
+  padding: .08rem 0;
+  background: -webkit-gradient(linear, left top, right top, from(#ff512f), to(#de1573));
+  background: linear-gradient(left, #ff512f, #de1573);
+  color: #fff;
+  border-radius: .05rem;
+}
+
+.erp-bind .code-query-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: .15rem 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 6rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.erp-bind .code-query-input input {
+  width: 2.9rem;
+  text-align: center;
+  padding: .08rem .1rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.erp-bind .bind-table {
+  width: 6rem;
+  max-width: 6rem;
+  margin-top: .2rem;
+  background-color: transparent;
+  border-spacing: 0;
+  border-collapse: collapse;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: .22rem;
+}
+
+.erp-bind .bind-table thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+  background-color: #f5f5f5;
+}
+
+.erp-bind .bind-table thead tr th {
+  vertical-align: middle;
+  border-bottom: 1px solid #ddd;
+  line-height: 1.5;
+  border-right: 1px solid #ddd;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: .05rem;
+}
+
+.erp-bind .bind-table thead tr th:last-child {
+  border-right: 0 none;
+}
+
+.erp-bind .bind-table thead tr th.no {
+  width: 1rem;
+}
+
+.erp-bind .bind-table thead tr th.name {
+  width: 2rem;
+}
+
+.erp-bind .bind-table tbody tr {
+  /*display: table-row;*/
+  vertical-align: inherit;
+  border-color: inherit;
+}
+
+.erp-bind .bind-table tbody tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+.erp-bind .bind-table tbody tr th {
+  vertical-align: middle;
+  border-bottom: 1px solid #ddd;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-right: 1px solid #ddd;
+  padding: .05rem;
+}
+
+.erp-bind .bind-table tbody tr th:last-child {
+  border-right: 0 none;
+}
+
+.erp-bind .bind-table tbody tr td {
+  vertical-align: middle;
+  border-bottom: 1px solid #ddd;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-right: 1px solid #ddd;
+  padding: .05rem;
+  word-break: break-all;
+}
+
+.erp-bind .bind-table tbody tr td:last-child {
+  border-right: 0 none;
+}
+
+.erp-bind-confirm {
+  width: 100%;
+  height: .7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.erp-bind-confirm a {
+  text-align: center;
+  padding: .08rem .5rem;
+  background: -webkit-gradient(linear, left top, right top, from(#ff512f), to(#de1573));
+  background: linear-gradient(left, #ff512f, #de1573);
+  color: #fff;
+  border-radius: .05rem;
+  margin: 0 .5rem;
+}
+
+/* erp-bind.html erp产品查询页 结束 */
+/* XX.html 某某页 */
+.bottom-page-tab {
+  width: 6.4rem;
+  background-color: #fff;
+  height: .7rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  left: 50%;
+  bottom: 0;
+  margin-left: -3.2rem;
+  padding: 0 .4rem;
+  box-sizing: border-box;
+  font-size: .23rem;
+}
+
+.bottom-page-tab > div {
+  position: relative;
+}
+
+.bottom-page-tab > div span {
+  margin: 0 .1rem;
+}
+
+/* XX.html 某某页 结束 */
+/* newyear-envelope.html 红包雨页 */
+.body-sale-envelope {
+  background: url(../img/bj.jpg) no-repeat top left;
+  background-size: cover;
+}
+
+.couten {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: hidden;
+}
+
+.couten li {
+  position: absolute;
+  -webkit-animation: all 3s linear;
+  animation: all 3s linear;
+  top: -100px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.couten li a {
+  display: block;
+}
+
+.mo {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  display: none;
+}
+
+.mo .sen {
+  width: 80%;
+  height: 150px;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.mo .sen img {
+  width: 60%;
+  height: 127px;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  right: 0;
+  bottom: 212px;
+  margin: auto;
+  vertical-align: top;
+}
+
+.mo .sen h3 {
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  top: -35px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+  color: red;
+  font-size: 140%;
+  font-weight: bold;
+  z-index: 999;
+}
+
+.mo .sen a {
+  width: 26%;
+  height: 50px;
+  background-color: #aedef4;
+  -webkit-box-shadow: rgba(174, 222, 244, 0.8) 0px 0px 2px, rgba(0, 0, 0, 0.0470588) 0px 0px 0px 1px inset;
+  box-shadow: rgba(174, 222, 244, 0.8) 0px 0px 2px, rgba(0, 0, 0, 0.0470588) 0px 0px 0px 1px inset;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 50px;
+  text-decoration: none;
+}
+
+.backward {
+  width: 100%;
+  background: #ccc;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+}
+
+.backward span {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  color: #000;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+  line-height: 100px;
+  font-size: 1000%;
+}
+
+.total-amount {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  z-index: 1000;
+  display: none;
+}
+
+/* newyear-envelope.html 红包雨页 结束 */
+/* newyear-index.html 2019活动首页页 */
+.newyear-index .newyear-lists {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.newyear-index .newyear-lists li {
+  width: 5.8rem;
+  height: 1.93rem;
+  margin-top: .3rem;
+}
+
+.newyear-index .newyear-lists li a {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: .2rem;
+  line-height: 1.6;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: .2rem;
+  color: #fff;
+}
+
+.newyear-index .newyear-lists li a.huodong1 {
+  background-image: url("../img/huodong1-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+}
+
+.newyear-index .newyear-lists li a.huodong2 {
+  background-image: url("../img/huodong2-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+}
+
+.newyear-index .newyear-lists li a.huodong3 {
+  background-image: url("../img/huodong3-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+}
+
+.newyear-index .newyear-lists li a .newyear-each-left h2 {
+  font-size: .24rem;
+  margin-bottom: .1rem;
+}
+
+.newyear-index .newyear-lists li a .newyear-each-left h3 {
+  font-size: .28rem;
+}
+
+.newyear-index .newyear-lists li a .newyear-each-left p {
+  font-size: .2rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.newyear-index .newyear-lists li a .newyear-each-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.newyear-index .newyear-lists li a .newyear-each-right span {
+  font-size: .2rem;
+  margin-right: .4rem;
+  margin-top: .1rem;
+  white-space: nowrap;
+}
+
+.newyear-index .newyear-lists li a .newyear-each-right span.last {
+  margin-top: .2rem;
+}
+
+.newyear-index .newyear-lists li a .newyear-each-right i {
+  font-size: .4rem;
+  margin-left: .1rem;
+}
+
+/* newyear-index.html 2019活动首页页 结束 */
+/* newyear-wish.html 许愿页 */
+.body-newyear-wish {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff4444), to(#ff9864));
+  background: linear-gradient(top, #ff4444, #ff9864);
+}
+
+.newyear-wish {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 1rem;
+  color: #fff;
+}
+
+.newyear-wish .user-info-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.newyear-wish .user-info-wrapper img {
+  width: 1.85rem;
+  height: 1.85rem;
+  margin-bottom: .2rem;
+  border-radius: 50%;
+}
+
+.newyear-wish .cur-amount {
+  margin: .3rem 0 1rem;
+  font-size: .3rem;
+}
+
+.newyear-wish .form-wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.newyear-wish .form-wrapper .fill-wish-wrapper {
+  width: 4.5rem;
+}
+
+.newyear-wish .form-wrapper .fill-wish-wrapper p {
+  height: .5rem;
+  line-height: .5rem;
+  text-align: center;
+  background-color: #fc474a;
+  border-top-left-radius: .1rem;
+  border-top-right-radius: .1rem;
+}
+
+.newyear-wish .form-wrapper .fill-wish-wrapper textarea {
+  width: 100%;
+  height: 1.95rem;
+  display: block;
+  border: 0 none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom-left-radius: .1rem;
+  border-bottom-right-radius: .1rem;
+  font-size: .22rem;
+  padding: .1rem;
+}
+
+.newyear-wish .form-wrapper .fill-phone {
+  width: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: .4rem 0;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.newyear-wish .form-wrapper .fill-phone .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: .1rem;
+  border-radius: .03rem;
+}
+
+.newyear-wish .form-wrapper .fill-phone .right i {
+  font-size: .3rem;
+  color: #fc474a;
+}
+
+.newyear-wish .form-wrapper .fill-phone .right input {
+  height: .3rem;
+  width: 2.1rem;
+  background-color: transparent;
+  font-size: .22rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 .1rem;
+}
+
+.newyear-wish .form-wrapper .sub-wrapper {
+  margin-top: .6rem;
+}
+
+.newyear-wish .form-wrapper .sub-wrapper input {
+  font-size: .3rem;
+  color: #fff;
+  background-color: #fec5b1;
+  padding: .1rem .8rem;
+  font-weight: bold;
+  border-radius: .1rem;
+}
+
+/* newyear-wish.html 许愿页 结束 */
+/* newyear-wishlists.html 愿望墙页 */
+.newyear-wishlists {
+  width: 100%;
+}
+
+.newyear-wishlists ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: .2rem 0;
+}
+
+.newyear-wishlists ul li {
+  width: 5.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: .2rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f13837), to(#f36b4c));
+  background: linear-gradient(top, #f13837, #f36b4c);
+  color: #fff;
+  border-radius: .1rem;
+}
+
+.newyear-wishlists ul li .top-infos {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: .2rem;
+}
+
+.newyear-wishlists ul li .top-infos img {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  margin-right: .2rem;
+}
+
+.newyear-wishlists ul li .top-infos .right .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: .1rem;
+}
+
+.newyear-wishlists ul li .top-infos .right .info i {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: .3rem;
+  height: .3rem;
+  background-image: url("../img/user-lists-icon.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+  margin-right: .1rem;
+}
+
+.newyear-wishlists ul li .top-infos .right .phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.newyear-wishlists ul li .top-infos .right .phone i {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: .3rem;
+  height: .3rem;
+  background-image: url("../img/phone-icon.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+  margin-right: .1rem;
+}
+
+.newyear-wishlists ul li .each-wish {
+  width: 100%;
+  padding: .2rem;
+  padding-top: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.newyear-wishlists ul li .each-wish p {
+  background-color: #ff9286;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: .1rem .1rem;
+  line-height: 1.6;
+  padding-bottom: .2rem;
+}
+
+.newyear-wishlists ul li .each-wish p:last-child {
+  padding-bottom: .1rem;
+}
+
+/* newyear-wishlists.html 愿望墙页 结束 */
+/* newyear-envelope-rule.html 抢红包规则页 */
+.body-newyear-envelope-rule {
+  background-image: url("../img/rule-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+  background-size: cover;
+}
+
+.newyear-envelope-rule {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.newyear-envelope-rule .rule-container {
+  width: 5rem;
+  color: #fff;
+  padding: 1.5rem 0 .6rem;
+}
+
+.newyear-envelope-rule .rule-container h2 {
+  text-align: center;
+  font-size: .35rem;
+  font-weight: bold;
+  margin-bottom: .3rem;
+}
+
+.newyear-envelope-rule .rule-container div p {
+  line-height: 1.5;
+  margin-top: .1rem;
+}
+
+.newyear-envelope-rule .note-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.newyear-envelope-rule .note-container img {
+  width: 1.2rem;
+}
+
+.newyear-envelope-rule .note-container .note-detail {
+  margin-top: .2rem;
+  margin-bottom: .3rem;
+  background-color: #fb3e32;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 3.5rem;
+  text-align: center;
+  padding: .0;
+  line-height: 1.5;
+  font-size: .23rem;
+  padding-top: .3rem;
+  border-radius: .05rem;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.newyear-envelope-rule .note-container .note-detail p {
+  width: 100%;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #ff0000;
+}
+
+.newyear-envelope-rule .note-container .note-detail p:last-child {
+  padding-bottom: .1rem;
+  border-bottom-left-radius: .05rem;
+  border-bottom-right-radius: .05rem;
+}
+
+.newyear-envelope-rule .join-now {
+  background-color: #f93939;
+  font-size: .3rem;
+  font-weight: bold;
+  padding: .15rem .5rem;
+  color: #fff;
+  border-radius: .05rem;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  margin-top: .3rem;
+}
+
+/* newyear-envelope-rule.html 抢红包规则页 结束 */
+/* newyear-question.html 答题赢红包页 */
+.body-newyear-question {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff4444), to(#ff9864));
+  background: linear-gradient(top, #ff4444, #ff9864);
+}
+
+.newyear-question {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.newyear-question .top-tab {
+  width: 100%;
+  height: 1rem;
+  background-color: #f43e4c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 .3rem;
+}
+
+.newyear-question .top-tab a {
+  font-size: .6rem;
+  color: #fff;
+}
+
+.newyear-question .top-tab a.top-right {
+  font-size: .22rem;
+}
+
+.newyear-question .question-container {
+  width: 5.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: .3rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.newyear-question .question-container .question-detail {
+  background: #ffead7;
+  color: #e88b11;
+  width: 5.2rem;
+  padding: .3rem .2rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-radius: .2rem;
+  box-sizing: border-box;
+  margin-top: .2rem;
+}
+
+.newyear-question .question-container .question-detail h2 {
+  font-size: .4rem;
+  text-align: center;
+  line-height: 1.8;
+  margin-bottom: .2rem;
+}
+
+.newyear-question .question-container .question-detail h2 span {
+  font-size: .23rem;
+}
+
+.newyear-question .question-container .question-detail p {
+  font-size: .26rem;
+  line-height: 1.5;
+}
+
+.newyear-question .question-container .question-options {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: .15rem .45rem;
+}
+
+.newyear-question .question-container .question-options label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  margin-top: .2rem;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: #fead9c;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: .1rem .2rem;
+  color: #fff;
+  border-radius: .3rem;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.newyear-question .question-container .question-options label.active {
+  background: -webkit-gradient(linear, left top, right top, from(#fe7c5a), to(#fd6e55));
+  background: linear-gradient(left, #fe7c5a, #fd6e55);
+  color: #fff;
+}
+
+.newyear-question .question-container .question-options label.active i {
+  background-image: url("../img/checked-icon.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+}
+
+.newyear-question .question-container .question-options label > span {
+  font-size: .3rem;
+  font-style: italic;
+}
+
+.newyear-question .question-container .question-options label p {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  line-height: 1.5;
+  padding: 0 .1rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.newyear-question .question-container .question-options label i {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: .33rem;
+  height: .33rem;
+  background-image: url("../img/no-check-icon.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+}
+
+.newyear-question .question-container .note-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: .2rem 0;
+}
+
+.newyear-question .question-container .note-container img {
+  width: .5rem;
+  margin-bottom: .1rem;
+}
+
+.newyear-question .question-container .note-container p {
+  color: #fff001;
+}
+
+.newyear-question .question-container .note-container p.alert {
+  margin-top: .1rem;
+  font-size: .3rem;
+}
+
+.newyear-question .question-container .note-container p.note {
+  line-height: 1.5;
+  padding: 0 .3rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-top: .2rem;
+  font-size: .22rem;
+}
+
+.newyear-question .question-container .next-question-btn {
+  margin: .4rem 0 .6rem;
+}
+
+.newyear-question .question-container .next-question-btn input {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: .3rem;
+  font-weight: bold;
+  padding: .1rem .6rem;
+  color: #fff;
+  border-radius: .1rem;
+  background-color: #d4d4d4;
+  color: #b8bac4;
+}
+
+.newyear-question .question-container .next-question-btn input.active {
+  background-color: #ffc7a7;
+  color: #fff;
+}
+
+/* newyear-question.html 答题赢红包页 结束 */
+/* newyear-question-rule.html 答题规则页 */
+.body-newyear-question-rule {
+  /*background-color: #fd5353;
+  background-position: center;
+  overflow-y: hidden;
+  background:url(../img/bj-v2.jpg) no-repeat top left ;
+  background-size:  cover;*/
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff4444), to(#ff9864));
+  background: linear-gradient(top, #ff4444, #ff9864);
+}
+
+.newyear-question-rule {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.newyear-question-rule .rule-container {
+  width: 5rem;
+  color: #fff;
+  padding: 1.5rem 0 .6rem;
+}
+
+.newyear-question-rule .rule-container h2 {
+  text-align: center;
+  font-size: .35rem;
+  font-weight: bold;
+  margin-bottom: .3rem;
+}
+
+.newyear-question-rule .rule-container div p {
+  line-height: 1.5;
+  margin-top: .1rem;
+}
+
+.newyear-question-rule .note-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.newyear-question-rule .note-container img {
+  width: 1.2rem;
+}
+
+.newyear-question-rule .note-container .note-detail {
+  margin-top: .2rem;
+  margin-bottom: .3rem;
+  background-color: #fb3e32;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 3.5rem;
+  text-align: center;
+  padding: .0;
+  line-height: 1.5;
+  font-size: .23rem;
+  padding-top: .3rem;
+  border-radius: .05rem;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.newyear-question-rule .note-container .note-detail p {
+  width: 100%;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #ff0000;
+}
+
+.newyear-question-rule .note-container .note-detail p:last-child {
+  padding-bottom: .1rem;
+  border-bottom-left-radius: .05rem;
+  border-bottom-right-radius: .05rem;
+}
+
+.newyear-question-rule .join-now {
+  background-color: #f93939;
+  font-size: .3rem;
+  font-weight: bold;
+  padding: .15rem .5rem;
+  color: #fff;
+  border-radius: .05rem;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  margin-top: .3rem;
+}
+
+/* newyear-question-rule.html 答题规则页 结束 */
+/* newyear-question-sum.html 答题结果页 */
+.body-newyear-question-sum {
+  /*background-color: #fd5353;
+  background-position: center;
+  overflow-y: hidden;
+  background:url(../img/bj-v2.jpg) no-repeat top left ;
+  background-size:  cover;*/
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff4444), to(#ff9b65));
+  background: linear-gradient(top, #ff4444, #ff9b65);
+}
+
+.newyear-question-sum {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.newyear-question-sum .rule-container {
+  width: 5rem;
+  color: #fff000;
+  padding: 1.2rem 0 .6rem;
+}
+
+.newyear-question-sum .rule-container h2 {
+  text-align: center;
+  font-size: .3rem;
+  font-weight: bold;
+  margin-bottom: .2rem;
+}
+
+.newyear-question-sum .rule-container div p {
+  line-height: 1.5;
+}
+
+.newyear-question-sum .note-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.newyear-question-sum .note-container img {
+  width: 1.2rem;
+}
+
+.newyear-question-sum .note-container .note-detail {
+  margin-top: .3rem;
+  margin-bottom: .3rem;
+  background-color: #fb3e32;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 3.5rem;
+  text-align: center;
+  padding: .0;
+  line-height: 1.5;
+  font-size: .23rem;
+  padding-top: .3rem;
+  border-radius: .05rem;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.newyear-question-sum .note-container .note-detail p {
+  width: 100%;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #ff0000;
+}
+
+.newyear-question-sum .note-container .note-detail p:last-child {
+  padding-bottom: .1rem;
+  border-bottom-left-radius: .05rem;
+  border-bottom-right-radius: .05rem;
+}
+
+.newyear-question-sum .join-now {
+  background-color: #ed4114;
+  font-size: .3rem;
+  font-weight: bold;
+  padding: .1rem .5rem;
+  color: #fff;
+  border-radius: .05rem;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  margin-top: .3rem;
+}
+
+/* newyear-question-sum.html 答题结果页 结束 */
 /* XX.html 某某页 */
 /* XX.html 某某页 结束 */
 /* XX.html 某某页 */
 /* XX.html 某某页 结束 */
 /* XX.html 某某页 */
+.sunflower-apply-btns {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.sunflower-apply-btns input {
+  background: -webkit-gradient(linear, left top, left bottom, from(#a686f9), to(#6d36f9));
+  background: linear-gradient(top, #a686f9, #6d36f9);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: .15rem .6rem;
+  color: #fff;
+  border-radius: .05rem;
+}
+
 /* XX.html 某某页 结束 */

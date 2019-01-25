@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <title>2019答题赢红包-苏尚儿</title>
+    <link href="./css/awesome.css" rel="stylesheet">
+    <link href="./css/base.css" rel="stylesheet">
+    <link href="./css/common.css" rel="stylesheet">
+    <link href="./css/iSlider.css" rel="stylesheet">
+    <link href="./css/index.css" rel="stylesheet">
+    <script type="text/javascript" src="./js/jquery1.10.2.js"></script>
+    <script crossorigin="anonymous" integrity="sha384-L4Dg5hpsyIngyyjq70hnw34icISF2c8EqAA9qaTGNvTAOnXAq5eSak96vTmC3SD3" src="https://lib.baomitu.com/vue/2.5.22/vue.js"></script>
+    <script type="text/javascript" src="./js/fontSize.js"></script>
+    <script type="text/javascript" src="./js/common.js"></script>
+    <!-- 问答 -->
+    <script type="text/javascript" src="./js/question.js"></script>
+    <!-- 移动版layer -->
+    <script type="text/javascript" src='./layer/layer.js'></script>
+    <link href="./layer/need/layer.css" type="text/css" rel="styleSheet">
+    
+</head>
+<body class='body-newyear-question'>
+    <div class="newyear-question" id="question-app">
+        <!-- 页面切换 -->
+        <div class="top-tab">
+            <a href="javascript:;" class='top-left' @click='dropAnswer'><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+            <a href="javascript:;" class='top-right'><span>本题剩余&nbsp;{{timeCountTop.begin}}&nbsp;秒</span></a>
+        </div>
+        <div class="question-container">
+            <!-- 顶部题目内容 -->
+            <div class="question-detail">
+                <h2>第{{curIndex + 1}}题<span>（共{{questionArr.length}}题）</span></h2>
+                <p>{{curQuestion.question}}</p>
+            </div>
+            <!-- 题目选项 -->
+            <div class="question-options">
+                <label :for="curQuestion.number + item.title" v-for="(item, index) in curQuestion.answers" :key="item.key" :class="{active:curActiveOptionIndex == index}" >
+                    <span>{{item.title}}.</span>
+                    <p>{{item.content}}</p>
+                    <i></i>
+                    <input type="radio" :id='curQuestion.number + item.title' :name='curQuestion.number' style='display: none'
+                        @change='tabAnswer($event,item,index)' 
+
+                    >
+                </label>
+            </div>
+            <!-- 小贴士 -->
+            <div class="note-container">
+                <img src="./img/love-icon.png" alt="">
+                <p class='alert'>{{alertItem}}</p>
+                <p class='note'>小贴士：{{curQuestion.note}}</p>
+            </div>
+            <!-- 下一题 -->
+            <a class="next-question-btn" href="javascript:;">
+                <input type="button" v-model="nextBtnVal"  @click='addIndex' 
+                    :class="{active:this.status == 1}"
+                >
+            </a>
+        </div>
+    </div>
+
+</body>
+<script>
+    var app = new Vue({
+      el: '#question-app',
+      data: {
+        prize: 0, // 
+        questionArr: [],
+        curIndex: 0, // 默认为第0个问题
+        status: -1, // -1为没有回答  0为回答错误 1为回答正确
+        curActiveOptionIndex: -1,
+        canAnswerFlag: true,
+        timeCountTop: { // 30秒倒计时
+            begin: 10,
+            timer: null
+        }, 
+        allScore: [],
+        ifShowNext: false,
+        nextBtnVal: "下一题",
+      },
+      computed: {
+        curQuestion: function () { // 当前问题
+            return this.questionArr[this.curIndex];
+        },
+        alertItem: function () { // 提示信息
+            switch (this.status) {
+                case -1:
+                return "";
+                break;
+                case 0:
+                return "回答错误。您还有机会重新回答哦";
+                break;
+                case 1:
+                return "恭喜 回答正确";
+                break;
+                default:
+                break;
+            }
+        },
+      },
+      created: function () {
+        var _this = this;
+        // 页面加载时ajax请求获取数据
+        // 1 获取奖池 改写prize值 ajax回调改写prize值
+        this.prize = 10;
+
+        // 2 生成随机问题数组 
+        this.questionArr = questionArr.splice(0,4);
+        // console.log(this.curQuestion);
+
+        // 30秒倒计时
+        this.timeCountFn(this.timeCountTop);
+
+      },
+      methods: {
+        addIndex: function ($event) {
+            // 获取当前元素
+            // console.log($($event.currentTarget));
+            
+            if(this.curIndex == this.questionArr.length -1) {
+                
+                // 最后一页跳转到查看成绩页
+
+                // 最后一个问题如果答对了 进入成绩页面 ajax发送成绩及结果
+                if (this.status == 1) {
+                    // 回答的总成绩this.allScore
+                    console.log(this.allScore);
+                    window.location.href = './newyear-question-sum.html';
+                    return;
+                }  // 如果答错了或没有回答 不return 继续往下执行
+            } else if (this.curIndex == -1) {
+                return;
+            }
+
+            // 如果没有答对 不能进入下一题
+            if (this.status != 1) {
+                layer.open({
+                    content: '只有回答正确才能进入' + this.nextBtnVal
+                    ,btn: ['继续答题','不答了，我放弃'] // "继续答题在右边 对于回调yes"
+                    ,yes: function(index){ // 左边是no 放弃  右边是yes 继续答题
+                      layer.close(index);
+                      // console.log("yes");
+                    }
+                    ,no: function(index){ // 取消答题 奖池回收
+                      layer.close(index);
+                      // console.log("no");
+                      window.location.href = './newyear-question-rule.html';
+                    }
+                });
+                return;
+            }
+
+            this.curIndex ++;
+            this.status = -1;
+            this.curActiveOptionIndex = -1;
+            this.canAnswerFlag = true;
+            // 重置input 选中状态为空
+            $(".question-options input").prop("checked", false);
+            // 重新开启定时器
+            this.timeCountTop.begin = 10;
+            this.timeCountFn(this.timeCountTop);
+
+            // 如果进入第四页
+            if(this.curIndex == this.questionArr.length -1) {
+                this.nextBtnVal = '查看成绩';
+
+            }
+
+        },
+        tabAnswer: function ($event, item, index) {
+            var _this = this;
+            if (this.canAnswerFlag == false) {
+                return false;
+            }
+            // console.log("tab" + item.isTrue);
+            if ($($event.currentTarget).is(':checked')) {
+                // 判断答案是否正确
+                // console.log(item.isTrue, "classActive", index);
+                this.curActiveOptionIndex = index;
+                if (item.isTrue) { // 回答正确
+                    this.status = 1;
+                    this.canAnswerFlag = false;
+                    // console.log('是否能够回答' + this.canAnswerFlag);
+                    // 回答正确 清除右上角定时器 倒计时改为 -
+                    clearInterval(_this.timeCountTop.timer);
+                    this.timeCountTop.begin = "-";
+                    // 计入总成绩
+                    this.allScore[this.curIndex] = 1; // 当前问题索引this.curIndex 值1
+
+                } else { // 回答错误
+                    this.status = 0;
+                    this.canAnswerFlag = true;
+                    // console.log('是否能够回答' + this.canAnswerFlag);
+                }
+                
+            }
+        },
+        timeCountFn: function (obj) {
+            var _this = this;
+            clearInterval(obj.timer);
+            obj.timer = setInterval(function () {
+                if (obj.begin == 0) {
+                    // 倒计时结束 用时超时
+                    clearInterval(obj.timer);
+                    
+                    console.log("在规定时间未完成 页面跳转");
+                    // 红包重回奖池 
+                    // 页面跳转
+                    layer.open({
+                        content: '答题超时，您可以分享给好友,让其获得答题赢取红包的机会'
+                        ,skin: 'msg'
+                        ,time: 3 //3秒后自动关闭
+                    });
+                    setTimeout(function () {
+                        // 答题超时 奖池回收 页面跳转
+                        _this.drawBack();
+                        window.location.href = './newyear-question-rule.html';
+                    }, 3000);
+                    return;
+                }
+                --obj.begin;
+            }, 1000);
+        },
+        drawBack: function () { // 奖池回收
+            // ajax发送把 this.prize 回收到奖池
+        },
+        dropAnswer: function () { // 放弃答题
+            var _this = this;
+            layer.open({
+                content: '中途放弃，将失去答题赢取红包的机会哦'
+                ,btn: ['继续答题','不答了，我放弃'] 
+                ,yes: function(index){ // 左边是no 右边是yes
+                    layer.close(index);
+                    console.log("yes");
+                }
+                ,no: function(index){ // 取消答题 奖池回收
+                    _this.drawBack(); // 奖池回收
+                    layer.close(index);
+                    console.log("no");
+                    window.location.href = './newyear-question-rule.html';
+                }
+            });
+        }
+      }
+    })
+</script>
+</html>
